@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Author: Damith Bandara
-# Version: 1.0
+# Version: 2.0
 # Created Date: 25th-Jan 2023
 # Purpose: Real Time CPU Utilization Monitoring
 
@@ -20,6 +20,9 @@ mkdir -p /var/log/cpuUtil
 LOGFILE=/var/log/cpuUtil/cpusage-`date +%h%d%y`.log
 
 touch $LOGFILE
+
+#You can use this script from your user. (No need to access root)
+sudo chmod 766 $LOGFILE
 
 for  path in $PATHS
 do
